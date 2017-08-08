@@ -1,0 +1,113 @@
+<sm-modal title="Customer Information." #customerModal>
+  <modal-content *ngIf="customer">    
+    <form class="ui form" [formGroup]="customerForm">
+      <div class="field">
+        <div class="four fields">
+          <div class="field">
+            <label for="idNumber">CustomerID</label>
+            <input type="text" name="idNumber" 
+                  placeholder="ID Number" 
+                  [class.error]="!customerForm.controls['id'].valid" 
+                  [formControl]="customerForm.controls['id']"
+                  [(ngModel)]="customer.id"
+                  [disabled]="doesExist">
+            <div *ngIf="customerForm.controls['id'].hasError('required')&&customerForm.controls['id'].dirty" 
+                  class="ui pointing red basic label">ID number is required</div>
+          </div>
+          <div class="field">
+            <label for="issueDate">Issue Date</label>
+            <input type="text" name="issueDate" placeholder="Issue Date" 
+                  [class.error]="!customerForm.controls['issueDate'].valid" 
+                  [formControl]="customerForm.controls['issueDate']"
+                  [(ngModel)]="customer.issueDate">
+            <div *ngIf="customerForm.controls['issueDate'].hasError('required')&&customerForm.controls['issueDate'].dirty" 
+                  class="ui pointing red basic label">Issue Date is required</div>
+             <div *ngIf="customerForm.controls['issueDate'].hasError('invalidDate')" 
+                  class="ui pointing red basic label">Issue Date has to be in format dd/mm/yyyy</div> 
+          </div>
+          <div class="field">
+            <label>Expiration Date</label>
+            <input type="text" name="expirationDate" placeholder="Expiration Date" 
+                    [class.error]="!customerForm.controls['expirationDate'].valid"
+                    [formControl]="customerForm.controls['expirationDate']"
+                    [(ngModel)]="customer.expirationDate">
+            <div *ngIf="customerForm.controls['expirationDate'].hasError('required')&&customerForm.controls['expirationDate'].dirty"
+                    class="ui pointing red basic label">Expiration Date is required</div>
+             <div *ngIf="customerForm.controls['expirationDate'].hasError('invalidDate')" 
+                    class="ui pointing red basic label">Expiration Date has to be in format dd/mm/yyyy</div> 
+
+          </div>
+          <div class="field">
+            <label>Country of issue</label>
+          
+              <input type="text" placeholder="Country of Issue" 
+                [formControl]="customerForm.controls['issueCountry']"
+                [class.error]="!customerForm.controls['issueCountry'].valid"
+                [(ngModel)]="customer.issueCountry">
+            <div *ngIf="customerForm.controls['issueCountry'].hasError('required')&&customerForm.controls['issueCountry'].dirty" 
+                  class="ui pointing red basic label">Country of issue is required</div>
+          </div>
+          <div class="field">
+            <label>City of issue</label>
+                <input type="text" placeholder="City of Issue" 
+                [formControl]="customerForm.controls['issueCity']"
+                [class.error]="!customerForm.controls['issueCity'].valid"
+                [(ngModel)]="customer.issueCity">
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Name</label>
+        <div class="two fields">
+          <div class="field">
+            <input type="text" name="firstName" placeholder="First Name" 
+                  [class.error]="!customerForm.controls['firstName'].valid" 
+                  [formControl]="customerForm.controls['firstName']"
+                  [(ngModel)]="customer.firstName">
+            <div *ngIf="customerForm.controls['firstName'].hasError('required')&&customerForm.controls['firstName'].dirty" 
+                  class="ui pointing red basic label">First name is required</div>
+          </div>
+          <div class="field">
+            <input type="text" name="lastName" placeholder="Last Name" 
+                  [class.error]="!customerForm.controls['lastName'].valid"
+                  [formControl]="customerForm.controls['lastName']"
+                  [(ngModel)]="customer.lastName">
+            <div *ngIf="customerForm.controls['lastName'].hasError('required')&&customerForm.controls['lastName'].dirty" 
+                  class="ui pointing red basic label">Last name is required</div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Address</label>
+          <input type="text" name="street address" placeholder="Street Address" 
+                [class.error]="!customerForm.controls['streetAddress'].valid"
+                [formControl]="customerForm.controls['streetAddress']"
+                [(ngModel)]="customer.streetAddress">
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>City</label>
+            <input type="text" placeholder="Country of Issue" 
+                [formControl]="customerForm.controls['city']"
+                [class.error]="!customerForm.controls['city'].valid"
+                [(ngModel)]="customer.city">
+          </div>
+          <div class="field">
+            <label>Country</label>
+            <input type="text" placeholder="Country of Issue" 
+                [formControl]="customerForm.controls['country']"
+                [class.error]="!customerForm.controls['country'].valid"
+                [(ngModel)]="customer.country">
+            <div *ngIf="customerForm.controls['country'].hasError('required')&&customerForm.controls['country'].dirty" 
+                class="ui pointing red basic label">Country is required</div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- <div class="ui message info">{{ customerForm.value | json }} DOES EXIST{{ doesExist }}</div> -->
+  </modal-content>
+  <modal-actions>
+    <button class="ui button primary" 
+            (click)="onSubmit(customerForm.value);customerModal.hide()"
+            [class.disabled]="!customerForm.valid && !doesExist">Submit</button>
+  </modal-actions>
+</sm-modal>

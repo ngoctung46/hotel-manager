@@ -1,0 +1,38 @@
+<div class="content" [class.occupied]="room.isOccupied">
+  <img class="right floated mini ui image" src="assets/images/{{room.imgUrl}}">
+  <div class="header">
+    Room Number: {{ room.name }} - {{ room.$key}}
+  </div>
+  <div class="meta">
+    Number of bed: {{ room.type }}
+  </div>
+  <div class="description">
+    Booking Status: <span class="ui basic green label" [class.green]="!room.isOccupied" [class.red]="room.isOccupied"> {{ room.isOccupied ? 'Occupied' : 'Available' }}</span>
+  </div>
+</div>
+<div *ngIf="!room.isOccupied" class="ui bottom attached button blue" 
+      (click)="showCustomerSearchModal();setSelected(room)" >
+  <i class="add icon"></i> Check-in
+</div>
+<div *ngIf="room.isOccupied" class="ui three bottom attached buttons">
+  <button class="ui button green" (click)="customerPopup.show($event,{position: 'bottom center'})">Customer</button>
+  <button class="ui button blue" (click)="servicePopup.show($event,{position: 'bottom center'})">Services</button>
+  <div class="ui red button" (click)="checkOut(room)">Checkout</div>
+</div>
+<app-customer-search-form [roomId]="room.$key" #searchForm></app-customer-search-form>
+
+<sm-popup #customerPopup>
+  <div class="ui icon buttons">
+    <button class="ui basic button orange">View</button>
+    <button class="ui basic button teal">Edit</button> 
+  </div> 
+</sm-popup>
+
+<sm-popup #servicePopup>
+  <div class="ui icon buttons">
+    <button class="ui basic button green" [routerLink]="['/orders',room.orderId]">View</button>
+    <button class="ui basic button blue" [routerLink]="['/hotel-services']">Add</button>
+  </div>
+</sm-popup>
+
+

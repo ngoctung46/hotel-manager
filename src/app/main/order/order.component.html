@@ -1,0 +1,45 @@
+<sm-modal title="Hoang Long Hotel - 40 Hau Giang Street, Ward 4, Tan Binh District, HCMC, VN" #orderModal>
+  <modal-content>
+    <h2 class="ui center aligned icon header">
+      <i class="money icon"></i> RECEIPT
+    </h2>
+    <div class="ui large header">Customer Information:</div>
+    <p>Name: {{ (customer | async)?.firstName }} {{ (customer | async)?.lastName }}</p>
+    <p>Address: {{ (customer | async)?.streetAddress }} - {{ (customer | async)?.city }} - {{ (customer | async)?.country }}
+    </p>
+    <p>ID No.: {{ (customer | async)?.id }} - Issue Date: {{ (customer | async)?.issueDate }} - Expiration Date: {{ (customer
+      | async)?.expirationDate }} - Issue Place: {{ (customer | async)?.issueCity }} - {{ (customer | async)?.issueCountry
+      }}
+      <table class="ui teal table">
+        <thead>
+          <tr>
+            <th>Services</th>
+            <th class="right aligned">Price</th>
+            <th class="right aligned">Quantity/Unit</th>
+            <th class="right aligned">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let service of services | async">
+            <td>{{ service.description }}</td>
+            <td class="right aligned">{{ service.price | number}}</td>
+            <td class="right aligned">{{ service.quantity }} {{ service.unit }}</td>
+            <td class="right aligned">{{ service.price * service.quantity | number}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th class="right aligned">
+              <h4 class="ui teal header">Total</h4>
+            </th>
+            <th class="right aligned">
+              <h4 class="ui teal header">{{ total }}</h4>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+
+  </modal-content>
+</sm-modal>
