@@ -1,19 +1,19 @@
 webpackJsonp([1,5],{
 
-/***/ 154:
+/***/ 155:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__room_model__ = __webpack_require__(269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__room_service__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__room_service__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__customer_service__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__order_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__order_service__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__service_model__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__service_model__ = __webpack_require__(93);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RoomCardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -113,32 +113,13 @@ var RoomCardComponent = (function () {
 
 /***/ }),
 
-/***/ 155:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Service; });
-var Service = (function () {
-    function Service(obj) {
-        this.description = obj && obj.description || '';
-        this.price = obj && obj.price || 0.0;
-        this.unit = obj && obj.unit || '';
-        this.quantity = obj && obj.quantity || 0.0;
-    }
-    return Service;
-}());
-
-//# sourceMappingURL=service.model.js.map
-
-/***/ }),
-
 /***/ 156:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu__ = __webpack_require__(273);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -280,14 +261,14 @@ var AppComponent = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(257);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menu_module__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__main_main_module__ = __webpack_require__(265);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__(44);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -362,7 +343,7 @@ var Customer = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__room_card_room_card_component__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__room_card_room_card_component__ = __webpack_require__(155);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerInfoComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -465,12 +446,12 @@ var CustomerSearchFormComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__customer_model__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__customer_service__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__room_service__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__room_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__order_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__order_service__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__order_model__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__service_model__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__service_model__ = __webpack_require__(93);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -667,6 +648,9 @@ function dateValidator(control) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_model__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_service__ = __webpack_require__(51);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HotelServiceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -678,14 +662,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var HotelServiceComponent = (function () {
-    function HotelServiceComponent() {
+    function HotelServiceComponent(route, orderService) {
+        this.route = route;
+        this.orderService = orderService;
+        this.service = new __WEBPACK_IMPORTED_MODULE_1__service_model__["a" /* Service */]();
+        this.services = __WEBPACK_IMPORTED_MODULE_1__service_model__["b" /* SERVICES */];
     }
     HotelServiceComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params.subscribe(function (params) {
+            _this.orderId = params['orderId'];
+        });
         this.hotelServiceModal.show();
+        $('.ui.dropdown').dropdown();
     };
-    HotelServiceComponent.prototype.hide = function () {
+    HotelServiceComponent.prototype.add = function () {
+        this.orderService.addService(this.orderId, this.service);
+        console.log("Add " + this.service + " to the " + this.orderId);
         this.hotelServiceModal.hide();
+        location.reload();
     };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])('hotelServiceModal'),
@@ -697,9 +696,10 @@ var HotelServiceComponent = (function () {
             template: __webpack_require__(390),
             styles: [__webpack_require__(334)]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__order_service__["a" /* OrderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__order_service__["a" /* OrderService */]) === "function" && _b || Object])
     ], HotelServiceComponent);
     return HotelServiceComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=hotel-service.component.js.map
@@ -711,7 +711,7 @@ var HotelServiceComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__room_service__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__room_service__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__customer_service__ = __webpack_require__(50);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -762,9 +762,9 @@ var MainComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_component__ = __webpack_require__(264);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__room_card_room_card_component__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__room_card_room_card_component__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__room_list_room_list_component__ = __webpack_require__(268);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__room_service__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__room_service__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng_semantic_ng_semantic__ = __webpack_require__(256);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(277);
@@ -773,10 +773,10 @@ var MainComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__customer_customer_component__ = __webpack_require__(262);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__customer_service__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__order_order_component__ = __webpack_require__(267);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__order_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__order_service__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__customer_customer_search_form_component__ = __webpack_require__(261);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__customer_customer_info_component__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_router__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_router__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__hotel_service_hotel_service_component__ = __webpack_require__(263);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -830,7 +830,7 @@ var MainModule = (function () {
                         component: __WEBPACK_IMPORTED_MODULE_11__customer_customer_component__["a" /* CustomerComponent */]
                     },
                     {
-                        path: 'hotel-services',
+                        path: 'hotel-services/:orderId',
                         component: __WEBPACK_IMPORTED_MODULE_18__hotel_service_hotel_service_component__["a" /* HotelServiceComponent */]
                     }
                 ]),
@@ -887,10 +887,10 @@ var Order = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__order_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__order_service__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__customer_service__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__room_service__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__room_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrderComponent; });
@@ -919,13 +919,28 @@ var OrderComponent = (function () {
     OrderComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
+            _this.orderId = params['id'];
             _this.order = _this.orderService.getOrder(params['id']);
             _this.order.subscribe(function (order) {
                 _this.customer = _this.customerService.getCustomer(order.customerId);
                 _this.services = _this.orderService.getServices(params['id']);
-                _this.orderModal.show();
+                _this.services.subscribe(function (services) {
+                    var total = 0.0;
+                    services.forEach(function (service) {
+                        total += service.price * service.quantity;
+                        _this.total = total;
+                    });
+                });
             });
         });
+        this.orderModal.show();
+    };
+    OrderComponent.prototype.close = function () {
+        this.orderModal.hide();
+        location.reload();
+    };
+    OrderComponent.prototype.remove = function (key) {
+        this.orderService.removeService(this.orderId, key);
     };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])('orderModal'),
@@ -1043,7 +1058,7 @@ var MenuItem = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_service__ = __webpack_require__(156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1308,7 +1323,7 @@ module.exports = "<sm-modal title=\"Customer Information.\" #customerModal>\n  <
 /***/ 390:
 /***/ (function(module, exports) {
 
-module.exports = "<sm-modal title=\"Checked in Customer Info\" icon=\"user circle outline\" #hotelServiceModal>\n  <modal-content>\n    <div class=\"ui selection dropdown\">\n      <input type=\"hidden\" name=\"gender\">\n      <i class=\"dropdown icon\"></i>\n      <div class=\"default text\">Gender</div>\n      <div class=\"menu\">\n        <div class=\"item\" data-value=\"1\">Male</div>\n        <div class=\"item\" data-value=\"0\">Female</div>\n      </div>\n    </div>\n  </modal-content>\n  <modal-actions>\n    <button class=\"ui blue button\" (click)=\"hide()\">Close</button>\n  </modal-actions> \n</sm-modal>"
+module.exports = "<sm-modal title=\"Add Service\" icon=\"user circle outline\" #hotelServiceModal>\n  <modal-content>\n\n    <select [(ngModel)]=\"service\" class=\"ui fluid search selection dropdown\">\n    <option *ngFor=\"let s of services\" [ngValue]=\"s\">{{ s.description }}</option>\n  </select >\n  <br/>\n  <div class=\"ui right labeled input\">\n    <div class=\"ui label\">Quantity</div>\n    <input type=\"text\" [(ngModel)]=\"service.quantity\">\n    <div class=\"ui basic label\">{{ service.unit}}</div>\n  </div>\n  <div class=\"ui right labeled input\">\n    <div class=\"ui label\">Price</div>\n    <input type=\"text\" [(ngModel)]=\"service.price\">\n  </div>\n  </modal-content>\n  <modal-actions>\n    <button class=\"ui blue button\" (click)=\"add()\">Add</button>\n  </modal-actions>\n</sm-modal>"
 
 /***/ }),
 
@@ -1322,14 +1337,14 @@ module.exports = "<app-room-list [rooms]=\"rooms\"></app-room-list>\r\n"
 /***/ 392:
 /***/ (function(module, exports) {
 
-module.exports = "<sm-modal title=\"Hoang Long Hotel - 40 Hau Giang Street, Ward 4, Tan Binh District, HCMC, VN\" #orderModal>\n  <modal-content>\n    <h2 class=\"ui center aligned icon header\">\n      <i class=\"money icon\"></i> RECEIPT\n    </h2>\n    <div class=\"ui large header\">Customer Information:</div>\n    <p>Name: {{ (customer | async)?.firstName }} {{ (customer | async)?.lastName }}</p>\n    <p>Address: {{ (customer | async)?.streetAddress }} - {{ (customer | async)?.city }} - {{ (customer | async)?.country }}\n    </p>\n    <p>ID No.: {{ (customer | async)?.id }} - Issue Date: {{ (customer | async)?.issueDate }} - Expiration Date: {{ (customer\n      | async)?.expirationDate }} - Issue Place: {{ (customer | async)?.issueCity }} - {{ (customer | async)?.issueCountry\n      }}\n      <table class=\"ui teal table\">\n        <thead>\n          <tr>\n            <th>Services</th>\n            <th class=\"right aligned\">Price</th>\n            <th class=\"right aligned\">Quantity/Unit</th>\n            <th class=\"right aligned\">Total</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let service of services | async\">\n            <td>{{ service.description }}</td>\n            <td class=\"right aligned\">{{ service.price | number}}</td>\n            <td class=\"right aligned\">{{ service.quantity }} {{ service.unit }}</td>\n            <td class=\"right aligned\">{{ service.price * service.quantity | number}}</td>\n          </tr>\n        </tbody>\n        <tfoot>\n          <tr>\n            <th></th>\n            <th></th>\n            <th class=\"right aligned\">\n              <h4 class=\"ui teal header\">Total</h4>\n            </th>\n            <th class=\"right aligned\">\n              <h4 class=\"ui teal header\"></h4>\n            </th>\n          </tr>\n        </tfoot>\n      </table>\n\n  </modal-content>\n</sm-modal>"
+module.exports = "<sm-modal title=\"Hoang Long Hotel - 40 Hau Giang Street, Ward 4, Tan Binh District, HCMC, VN\" #orderModal>\n  <modal-content>\n    <h2 class=\"ui center aligned icon header\">\n      <i class=\"money icon\"></i> RECEIPT\n    </h2>\n    <div class=\"ui large header\">Customer Information:</div>\n    <p>Name: {{ (customer | async)?.firstName }} {{ (customer | async)?.lastName }}</p>\n    <p>Address: {{ (customer | async)?.streetAddress }} - {{ (customer | async)?.city }} - {{ (customer | async)?.country }}\n    </p>\n    <p>ID No.: {{ (customer | async)?.id }} - Issue Date: {{ (customer | async)?.issueDate }} - Expiration Date: {{ (customer\n      | async)?.expirationDate }} - Issue Place: {{ (customer | async)?.issueCity }} - {{ (customer | async)?.issueCountry\n      }}\n      <table class=\"ui teal table\">\n        <thead>\n          <tr>\n            <th>Services</th>\n            <th class=\"right aligned\">Price</th>\n            <th class=\"right aligned\">Quantity/Unit</th>\n            <th class=\"right aligned\">Total</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let service of services | async\">\n            <td>{{ service.description }}</td>\n            <td class=\"right aligned\">{{ service.price | number}}</td>\n            <td class=\"right aligned\">{{ service.quantity }} {{ service.unit }}</td>\n            <td class=\"right aligned\">{{ service.price * service.quantity | number}} <i class=\"ui red window close icon\" (click)=\"remove(service.$key)\"></i></td>\n          </tr>\n        </tbody>\n        <tfoot>\n          <tr>\n            <th></th>\n            <th></th>\n            <th class=\"right aligned\">\n              <h4 class=\"ui teal header\">Total</h4>\n            </th>\n            <th class=\"right aligned\">\n              <h4 class=\"ui teal header\" *ngIf=\"total\">{{ total | number }} VNĐ</h4>\n            </th>\n          </tr>\n        </tfoot>\n      </table>\n  </modal-content>\n  <modal-actions>\n    <button class=\"ui blue button\" (click)=\"close()\">Close</button>\n  </modal-actions>\n</sm-modal>"
 
 /***/ }),
 
 /***/ 393:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content\" [class.occupied]=\"room.isOccupied\">\n  <img class=\"right floated mini ui image\" src=\"assets/images/{{room.imgUrl}}\">\n  <div class=\"header\">\n    Room Number: {{ room.name }} - {{ room.$key}}\n  </div>\n  <div class=\"meta\">\n    Number of bed: {{ room.type }}\n  </div>\n  <div class=\"description\">\n    Booking Status: <span class=\"ui basic green label\" [class.green]=\"!room.isOccupied\" [class.red]=\"room.isOccupied\"> {{ room.isOccupied ? 'Occupied' : 'Available' }}</span>\n  </div>\n</div>\n<div *ngIf=\"!room.isOccupied\" class=\"ui bottom attached button blue\" \n      (click)=\"showCustomerSearchModal();setSelected(room)\" >\n  <i class=\"add icon\"></i> Check-in\n</div>\n<div *ngIf=\"room.isOccupied\" class=\"ui three bottom attached buttons\">\n  <button class=\"ui button green\" (click)=\"customerPopup.show($event,{position: 'bottom center'})\">Customer</button>\n  <button class=\"ui button blue\" (click)=\"servicePopup.show($event,{position: 'bottom center'})\">Services</button>\n  <div class=\"ui red button\" (click)=\"checkOut(room)\">Checkout</div>\n</div>\n<app-customer-search-form [roomId]=\"room.$key\" #searchForm></app-customer-search-form>\n\n<sm-popup #customerPopup>\n  <div class=\"ui icon buttons\">\n    <button class=\"ui basic button orange\">View</button>\n    <button class=\"ui basic button teal\">Edit</button> \n  </div> \n</sm-popup>\n\n<sm-popup #servicePopup>\n  <div class=\"ui icon buttons\">\n    <button class=\"ui basic button green\" [routerLink]=\"['/orders',room.orderId]\">View</button>\n    <button class=\"ui basic button blue\" [routerLink]=\"['/hotel-services']\">Add</button>\n  </div>\n</sm-popup>\n\n\n"
+module.exports = "<div class=\"content\" [class.occupied]=\"room.isOccupied\">\n  <img class=\"right floated mini ui image\" src=\"assets/images/{{room.imgUrl}}\">\n  <div class=\"header\">\n    Room Number: {{ room.name }} - {{ room.$key}}\n  </div>\n  <div class=\"meta\">\n    Number of bed: {{ room.type }}\n  </div>\n  <div class=\"description\">\n    Booking Status: <span class=\"ui basic green label\" [class.green]=\"!room.isOccupied\" [class.red]=\"room.isOccupied\"> {{ room.isOccupied ? 'Occupied' : 'Available' }}</span>\n  </div>\n</div>\n<div *ngIf=\"!room.isOccupied\" class=\"ui bottom attached button blue\" \n      (click)=\"showCustomerSearchModal();setSelected(room)\" >\n  <i class=\"add icon\"></i> Check-in\n</div>\n<div *ngIf=\"room.isOccupied\" class=\"ui three bottom attached buttons\">\n  <button class=\"ui button green\" (click)=\"customerPopup.show($event,{position: 'bottom center'})\">Customer</button>\n  <button class=\"ui button blue\" (click)=\"servicePopup.show($event,{position: 'bottom center'})\">Services</button>\n  <div class=\"ui red button\" (click)=\"checkOut(room)\">Checkout</div>\n</div>\n<app-customer-search-form [roomId]=\"room.$key\" #searchForm></app-customer-search-form>\n\n<sm-popup #customerPopup>\n  <div class=\"ui icon buttons\">\n    <button class=\"ui basic button orange\">View</button>\n    <button class=\"ui basic button teal\">Edit</button> \n  </div> \n</sm-popup>\n\n<sm-popup #servicePopup>\n  <div class=\"ui icon buttons\">\n    <button class=\"ui basic button green\" [routerLink]=\"['/orders',room.orderId]\" skipLocationChange>View</button>\n    <button class=\"ui basic button blue\" [routerLink]=\"['/hotel-services',room.orderId]\" skipLocationChange>Add</button>\n  </div>\n</sm-popup>\n\n\n"
 
 /***/ }),
 
@@ -1353,7 +1368,7 @@ module.exports = "<div class=\"ui fixed inverted menu\">\n  <div class=\"ui cont
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1408,6 +1423,55 @@ var CustomerService = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(36);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrderService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var OrderService = (function () {
+    function OrderService(db) {
+        this.db = db;
+    }
+    OrderService.prototype.addOrder = function (order) {
+        return this.db.list('/orders').push(order).then(function (item) { return item.key; });
+    };
+    OrderService.prototype.getOrder = function (key) {
+        return this.db.object("/orders/" + key);
+    };
+    OrderService.prototype.addService = function (key, service) {
+        return this.db.list("/orders/" + key + "/services").push(service);
+    };
+    OrderService.prototype.getServices = function (key) {
+        return this.db.list("/orders/" + key + "/services");
+    };
+    OrderService.prototype.removeService = function (orderId, key) {
+        this.db.list("/orders/" + orderId + "/services").remove(key);
+    };
+    OrderService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["c" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["c" /* AngularFireDatabase */]) === "function" && _a || Object])
+    ], OrderService);
+    return OrderService;
+    var _a;
+}());
+
+//# sourceMappingURL=order.service.js.map
+
+/***/ }),
+
+/***/ 52:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(36);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RoomService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1450,49 +1514,67 @@ module.exports = __webpack_require__(247);
 
 /***/ }),
 
-/***/ 69:
+/***/ 93:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(36);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrderService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var OrderService = (function () {
-    function OrderService(db) {
-        this.db = db;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Service; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SERVICES; });
+var Service = (function () {
+    function Service(obj) {
+        this.description = obj && obj.description || '';
+        this.price = obj && obj.price || 0.0;
+        this.unit = obj && obj.unit || '';
+        this.quantity = obj && obj.quantity || 0.0;
     }
-    OrderService.prototype.addOrder = function (order) {
-        return this.db.list('/orders').push(order).then(function (item) { return item.key; });
-    };
-    OrderService.prototype.getOrder = function (key) {
-        return this.db.object("/orders/" + key);
-    };
-    OrderService.prototype.addService = function (key, service) {
-        return this.db.list("/orders/" + key + "/services").push(service);
-    };
-    OrderService.prototype.getServices = function (key) {
-        return this.db.list("/orders/" + key + "/services");
-    };
-    OrderService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["c" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["c" /* AngularFireDatabase */]) === "function" && _a || Object])
-    ], OrderService);
-    return OrderService;
-    var _a;
+    return Service;
 }());
 
-//# sourceMappingURL=order.service.js.map
+var SERVICES = [
+    new Service({
+        description: "Bottled Water",
+        price: 10000,
+        unit: "bottle",
+        quantity: 1
+    }),
+    new Service({
+        description: "Soda",
+        price: 15000,
+        unit: "can",
+        quantity: 1
+    }),
+    new Service({
+        description: "Tiger Beer",
+        price: 17000,
+        unit: "can",
+        quantity: 1
+    }),
+    new Service({
+        description: "Heineken Beer",
+        price: 20000,
+        unit: "can",
+        quantity: 1
+    }),
+    new Service({
+        description: "Normal Laundry",
+        price: 30000,
+        unit: "set",
+        quantity: 1
+    }),
+    new Service({
+        description: "Special Laundry",
+        price: 80000,
+        unit: "suit",
+        quantity: 1
+    }),
+    new Service({
+        description: "Booking Fee",
+        price: 0,
+        unit: "VN\u0110",
+        quantity: 1
+    })
+];
+//# sourceMappingURL=service.model.js.map
 
 /***/ })
 
