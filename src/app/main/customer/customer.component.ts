@@ -62,7 +62,7 @@ export class CustomerComponent implements OnInit {
         this.customer.id = this.customerId;
         this.doesExist = false;
       }
-      this.customerModal.show();
+      this.customerModal.show({observeChanges: true});
     });
   }
 

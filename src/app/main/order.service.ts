@@ -18,4 +18,10 @@ export class OrderService {
   getServices(key: string): Observable<Service[]> {
     return this.db.list(`/orders/${key}/services`);
   }
+  removeService(orderId: string, key: string) {
+    this.db.list(`/orders/${orderId}/services`).remove(key);
+  }
+  updateOrder(key: string, data: any): void {
+    this.db.list('/orders').update(key, data);
+  }
 }

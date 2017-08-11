@@ -16,7 +16,7 @@ import { RoomCardComponent } from '../room-card/room-card.component';
             <button type="submit" class="ui button primary" 
                     [class.disabled]="customerId==''" 
                     (click)="hide();"
-                    [routerLink]="['customer-check-in', customerId, roomId]" skipLocationChange>Submit</button>
+                    [routerLink]="['/customer-check-in', customerId, roomId]" skipLocationChange>Submit</button>
         </modal-actions>
     </sm-modal>
     `,

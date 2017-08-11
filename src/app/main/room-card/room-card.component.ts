@@ -7,9 +7,10 @@ import { CustomerService } from '../customer.service';
 import { OrderService } from '../order.service';
 import { Order } from '../order.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Location }                 from '@angular/common';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { Service } from '../service.model';
+import { RoomStatus } from '../room-type';
 
 @Component({
   selector: 'app-room-card',
@@ -24,17 +25,20 @@ export class RoomCardComponent implements OnInit {
   @ViewChild('orderModal') orderModal;
   @HostBinding('attr.class') cssClass = 'card';
   @Input() room: Room;
+  isDirty: boolean;
   selectedRoom: Room = new Room('', '', 1, 0, false, 1, '', '');
   customerId = '';
   order: Order;
   orderId = '';
+
   constructor(public fb: FormBuilder,
     public roomService: RoomService,
     public customerService: CustomerService,
     public orderService: OrderService,
     public db: AngularFireDatabase,
     private route: ActivatedRoute,
-    private location: Location) {
+    private location: Location,
+    private router: Router) {
   }
 
   ngOnInit() {
@@ -45,27 +49,26 @@ export class RoomCardComponent implements OnInit {
   }
 
   checkOut(room: Room): void {
+    this.router.navigate(['/orders', room.orderId], { skipLocationChange: true });
+  }
+
+  clean(room: Room): void {
+    room.status = 1;
     room.isOccupied = false;
-    room.orderId = '';
-    this.roomService.updateRoom(room.$key, {
-      isOccupied: false,
-      orderId: ''
-    });
+    this.roomService.updateRoom(room.$key, { status: room.status, isOccupied: false });
   }
 
   showCustomerSearchModal(): void {
     this.searchForm.show();
   }
 
-  addService(room): void {
-    this.orderService.addService(room.orderId, new Service({
-      description: 'bottle water',
-      price: 10000,
-      quantity: 2,
-      unit: 'bottle'
-    }));
-    console.log("added service to the room");
+  markAsDirtyOrClean(room: Room): void {
+    if (room.status == 1) room.status = 2;
+    else room.status = 1;
+    this.roomService.updateRoom(room.$key, { status: room.status });
   }
+
+ 
 }
 
 

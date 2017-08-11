@@ -10,36 +10,63 @@
     <p>ID No.: {{ (customer | async)?.id }} - Issue Date: {{ (customer | async)?.issueDate }} - Expiration Date: {{ (customer
       | async)?.expirationDate }} - Issue Place: {{ (customer | async)?.issueCity }} - {{ (customer | async)?.issueCountry
       }}
-      <table class="ui teal table">
-        <thead>
-          <tr>
-            <th>Services</th>
-            <th class="right aligned">Price</th>
-            <th class="right aligned">Quantity/Unit</th>
-            <th class="right aligned">Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let service of services | async">
-            <td>{{ service.description }}</td>
-            <td class="right aligned">{{ service.price | number}}</td>
-            <td class="right aligned">{{ service.quantity }} {{ service.unit }}</td>
-            <td class="right aligned">{{ service.price * service.quantity | number}}</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th></th>
-            <th></th>
-            <th class="right aligned">
-              <h4 class="ui teal header">Total</h4>
-            </th>
-            <th class="right aligned">
-              <h4 class="ui teal header">{{ total }}</h4>
-            </th>
-          </tr>
-        </tfoot>
-      </table>
-
+      <p>Check In At: {{ (order | async)?.checkInTime }}</p>
+      <p>Staying Time: {{ day }} day(s), {{ hour }} hour(s), and {{ minutes }} minutes
+        <table class="ui teal table">
+          <thead>
+            <tr>
+              <th>Services</th>
+              <th class="right aligned">Price</th>
+              <th class="right aligned">Quantity/Unit</th>
+              <th class="right aligned">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let service of services | async; let i = index; ">
+              <ng-template #other_content>
+                <td>{{ service.description }}</td>
+                <td class="right aligned" *ngIf="price">{{ price | number}}</td>
+                <td class="right aligned" *ngIf="quantity">{{ quantity }} {{ unit }}</td>
+                <td class="right aligned" *ngIf="price">{{ price * quantity | number}} <i class="ui red window close icon" (click)="remove(service.$key)"></i></td>
+              </ng-template>
+              <ng-container *ngIf="i > 0;else other_content">
+                <td>{{ service.description }}</td>
+                <td class="right aligned">{{ service.price | number}}</td>
+                <td class="right aligned">{{ service.quantity }} {{ service.unit }}</td>
+                <td class="right aligned">{{ service.price * service.quantity | number}} <i class="ui red window close icon" (click)="remove(service.$key)"></i></td>
+              </ng-container>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th></th>
+              <th class="right aligned">
+                <h4 class="ui teal header">Discount</h4>
+              </th>
+              <th class="right aligned">
+                <div class="ui right labeled input">
+                  <input type="text" placeholder="Enter discount amount.." [(ngModel)]="discount">
+                  <div class="ui basic label">
+                    $
+                  </div>
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th class="right aligned">
+                <h4 class="ui teal header">Total</h4>
+              </th>
+              <th class="right aligned">
+                <h4 class="ui teal header" *ngIf="total">{{ total - discount | number}} VNĐ</h4>
+              </th>
+            </tr>
+          </tfoot>
+        </table>
   </modal-content>
+  <modal-actions>
+    <button class="ui blue button" (click)="close()">Checkout</button>
+  </modal-actions>
 </sm-modal>

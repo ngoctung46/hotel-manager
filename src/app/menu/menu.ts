@@ -12,8 +12,8 @@ export const MENU: MenuItem[] = [
         'Reports',
         '/reports',
         [
-            new MenuItem('Daily Report','/daily-report'),
-            new MenuItem('Monthly Report', '/monthly-report'),
-            new MenuItem('Periodical Report', '/periodical-report')
+            new MenuItem('Daily Report','daily-report'),
+            new MenuItem('Monthly Report', 'monthly-report'),
+            new MenuItem('Periodical Report', 'periodical-report')
         ])
 ];

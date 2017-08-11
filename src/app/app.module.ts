@@ -7,17 +7,24 @@ import { AppComponent } from './app.component';
 import { MenuModule } from './menu/menu.module';
 import { MainModule } from './main/main.module';
 import { RouterModule } from '@angular/router';
+import { ReportModule } from './report/report.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+import * as $ from 'jquery';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule,
     MenuModule,
     MainModule,
-    RouterModule
+    ReportModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

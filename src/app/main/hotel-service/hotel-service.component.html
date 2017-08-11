@@ -1,16 +1,21 @@
-<sm-modal title="Checked in Customer Info" icon="user circle outline" #hotelServiceModal>
+<sm-modal title="Add Service" icon="user circle outline" #hotelServiceModal>
   <modal-content>
-    <div class="ui selection dropdown">
-      <input type="hidden" name="gender">
-      <i class="dropdown icon"></i>
-      <div class="default text">Gender</div>
-      <div class="menu">
-        <div class="item" data-value="1">Male</div>
-        <div class="item" data-value="0">Female</div>
-      </div>
-    </div>
+
+    <select [(ngModel)]="service" class="ui fluid search selection dropdown">
+    <option *ngFor="let s of services" [ngValue]="s">{{ s.description }}</option>
+  </select >
+  <br/>
+  <div class="ui right labeled input">
+    <div class="ui label">Quantity</div>
+    <input type="text" [(ngModel)]="service.quantity">
+    <div class="ui basic label">{{ service.unit}}</div>
+  </div>
+  <div class="ui right labeled input">
+    <div class="ui label">Price</div>
+    <input type="text" [(ngModel)]="service.price">
+  </div>
   </modal-content>
   <modal-actions>
-    <button class="ui blue button" (click)="hide()">Close</button>
+    <button class="ui blue button" (click)="add()">Add</button>
   </modal-actions>
 </sm-modal>
