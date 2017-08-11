@@ -5,7 +5,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const appRoutes: Routes = [
   { path: '',   redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', loadChildren: './main/main.module#MainModule' },
-  { path: 'reports', loadChildren: './main/report.module#ReportModule' }
+  { path: 'reports', loadChildren: './report/report.module#ReportModule' },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

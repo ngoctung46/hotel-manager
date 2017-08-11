@@ -16,6 +16,7 @@ import 'rxjs/add/operator/switchMap';
 })
 export class OrderComponent implements OnInit {
   @ViewChild('orderModal') orderModal;
+  IsCheckOut = false;
   customer: Observable<Customer>;
   order: Observable<Order>;
   orderId: string;

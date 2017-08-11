@@ -1,26 +1,26 @@
 <div class="content" [class.occupied]="room.isOccupied" [class.dirty]="room.status==2">
   <div class="ui huge header aligned center">
-    Room Number: {{ room.name }}
+    Phòng: {{ room.name }}
   </div>
   <div class="ui violet header meta">
-    Number of bed: {{ room.type }} <img class="right floated mini ui image" src="assets/images/{{room.imgUrl}}">
+    Loại Phòng: {{ room.type == 1 ? 'Phòng Đơn' : 'Phòng Đôi' }} <img class="right floated mini ui image" src="assets/images/{{room.imgUrl}}">
   </div>
   <div class="ui blue header">
-    Booking Status: <span class="ui basic green label right floated" [class.green]="!room.isOccupied" [class.red]="room.isOccupied"> {{ room.isOccupied ? 'Occupied' : 'Available' }}</span>
+    Tình Trạng: <span class="ui basic green label right floated" [class.green]="!room.isOccupied" [class.red]="room.isOccupied"> {{ room.isOccupied ? 'Có Khách' : 'Trống' }}</span>
   </div>
   <div class="ui pink header">
-    Room Status: <span class="ui basic green label right floated" [class.blue]="room.status==2"> {{ room.status == 1 ? 'Clean' : 'Dirty' }}</span>
+    Tình trạng vệ sinh: <span class="ui basic green label right floated" [class.blue]="room.status==2"> {{ room.status == 1 ? 'Sạch' : 'Dơ' }}</span>
   </div>
 </div>
 <div *ngIf="!room.isOccupied && room.status == 1" class="ui bottom attached button blue" (click)="showCustomerSearchModal();setSelected(room)">
-  <i class="add icon"></i> Check-in
+  <i class="add icon"></i> Nhận Phòng
 </div>
 <div *ngIf="room.isOccupied" class="ui two bottom attached buttons">
-  <button class="ui button green" (click)="servicePopup.show($event, {position: 'bottom center'})">Actions</button>
-  <div class="ui red button" (click)="checkOut(room)">Checkout</div>
+  <button class="ui button green" (click)="servicePopup.show($event, {position: 'bottom center'})">Menu Phụ</button>
+  <div class="ui red button" (click)="checkOut(room)">Trả Phòng</div>
 </div>
 <div *ngIf="!room.isOccupied && room.status==2" class="ui bottom attached button orange" (click)="clean(room)">
-  <i class="paint brush icon"></i> Clean
+  <i class="paint brush icon"></i> Phòng Đã Dọn
 </div>
 <app-customer-search-form [roomId]="room.$key" #searchForm></app-customer-search-form>
 
@@ -33,8 +33,8 @@
 
 <sm-popup #servicePopup>
   <div class="ui icon buttons">
-    <button class="ui button green" [routerLink]="['/orders',room.orderId]" skipLocationChange>View Receipt</button>
-    <button class="ui button blue" [routerLink]="['/hotel-services',room.orderId]" skipLocationChange>Add Services</button>
-    <button class="ui button violet" (click)="markAsDirtyOrClean(room)">{{ room.status == 1 ? 'Mark Dirty' : 'Mark Clean'}}</button>
+    <!-- <button class="ui button green" [routerLink]="['/orders',room.orderId]" skipLocationChange>Xem Hóa Đơn Tạm Thời/</button> -->
+    <button class="ui button blue" [routerLink]="['/hotel-services',room.orderId]" skipLocationChange>Thêm Dịch Vụ</button>
+    <button class="ui button violet" (click)="markAsDirtyOrClean(room)">{{ room.status == 1 ? 'Báo Phòng Dơ' : 'Báo Phòng Sạch'}}</button>
   </div>
 </sm-popup>

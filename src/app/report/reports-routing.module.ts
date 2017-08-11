@@ -8,21 +8,25 @@ import { PeriodicalReportComponent } from './periodical-report/periodical-report
 const reportRoutes: Routes = [
     { 
         path: 'reports',
-        component: ReportComponent,
-        children: [
-            {
-                path: 'daily-report',
-                component: DailyReportComponent
-            },
-            {
-                path: 'montly-report',
-                component: MonthlyReportComponent
-            },
-            {
-                path: 'periodical-report',
-                component: PeriodicalReportComponent
-            }
-        ]
+        component: ReportComponent
+        // children: [
+        //     {
+        //         path: 'daily-report',
+        //         component: DailyReportComponent
+        //     },
+        //     {
+        //         path: 'montly-report',
+        //         component: MonthlyReportComponent
+        //     },
+        //     {
+        //         path: 'periodical-report',
+        //         component: PeriodicalReportComponent
+        //     }
+        // ]
+    },
+    {
+        path: 'reports/daily-report',
+        component: DailyReportComponent
     }
 ];
 

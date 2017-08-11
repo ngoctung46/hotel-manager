@@ -14,17 +14,17 @@ export class Service {
 export const SERVICES: Service[] = [
     new Service(
         {
-            description: `Bottled Water`,
+            description: `Nước suối`,
             price: 10000,
-            unit: `bottle`,
+            unit: `chai`,
             quantity: 1
         }
     ),
     new Service(
         {
-            description: `Soda`,
+            description: `Nước Ngọt`,
             price: 15000,
-            unit: `can`,
+            unit: `lon`,
             quantity: 1
         }
     ),
@@ -46,7 +46,7 @@ export const SERVICES: Service[] = [
     ),
     new Service(
         {
-            description: `Normal Laundry`,
+            description: `Giặt ủi thường`,
             price: 30000,
             unit: `set`,
             quantity: 1
@@ -54,7 +54,7 @@ export const SERVICES: Service[] = [
     ),
     new Service(
         {
-            description: `Special Laundry`,
+            description: `Giặt ủi đặc biệt`,
             price: 80000,
             unit: `suit`,
             quantity: 1
@@ -62,7 +62,7 @@ export const SERVICES: Service[] = [
     ),
     new Service(
         {
-            description: `Booking Fee`,
+            description: `Phụ thu`,
             price: 0,
             unit: `VNĐ`,
             quantity: 1

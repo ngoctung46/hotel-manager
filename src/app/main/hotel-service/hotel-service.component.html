@@ -6,16 +6,16 @@
   </select >
   <br/>
   <div class="ui right labeled input">
-    <div class="ui label">Quantity</div>
+    <div class="ui label">Số Lượng</div>
     <input type="text" [(ngModel)]="service.quantity">
     <div class="ui basic label">{{ service.unit}}</div>
   </div>
   <div class="ui right labeled input">
-    <div class="ui label">Price</div>
+    <div class="ui label">Giá</div>
     <input type="text" [(ngModel)]="service.price">
   </div>
   </modal-content>
   <modal-actions>
-    <button class="ui blue button" (click)="add()">Add</button>
+    <button class="ui blue button" (click)="add()">Thêm</button>
   </modal-actions>
 </sm-modal>

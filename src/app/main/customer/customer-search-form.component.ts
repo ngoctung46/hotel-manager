@@ -3,12 +3,12 @@ import { RoomCardComponent } from '../room-card/room-card.component';
 @Component({
     selector: 'app-customer-search-form',
     template: `
-    <sm-modal title="Check In Customer" icon="user circle outline" #searchModal>
+    <sm-modal title="Nhận Khách" icon="user circle outline" #searchModal>
         <modal-content>
             <form class="ui form">
             <div class="field">
-                <label>Enter Customer ID</label>
-                <input type="text" name="customerId" id="customerId" placeholder="Enter customer ID...." [(ngModel)]="customerId">
+                <label>Nhập mã số:</label>
+                <input type="text" name="customerId" id="customerId" placeholder="Mã Số giấy tờ của khách ...." [(ngModel)]="customerId">
             </div>
             </form>
         </modal-content>
@@ -16,7 +16,7 @@ import { RoomCardComponent } from '../room-card/room-card.component';
             <button type="submit" class="ui button primary" 
                     [class.disabled]="customerId==''" 
                     (click)="hide();"
-                    [routerLink]="['/customer-check-in', customerId, roomId]" skipLocationChange>Submit</button>
+                    [routerLink]="['/customer-check-in', customerId, roomId]" skipLocationChange>Tìm</button>
         </modal-actions>
     </sm-modal>
     `,
